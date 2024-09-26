@@ -1,0 +1,29 @@
+#version: '3'
+#services:
+#  pocOlymplica-api-rest:
+#    build:
+#      context: .
+#      dockerfile: Dockerfile
+#    ports:
+#      - "8000:8000"
+#    volumes:
+#      - .:/app
+#    environment:
+#      - DJANGO_SETTINGS_MODULE=poc_api
+#    networks:
+#      - POCOLYMPLICA-DEV
+#  postgres:
+#    image: postgres:16
+#    ports:
+#      - "5432:5432"
+#    volumes:
+#      - ./pgdata:/var/lib/postgresql/data
+#    environment:
+#      POSTGRES_DB: postgres
+#      POSTGRES_USER: postgres
+#      POSTGRES_PASSWORD: postgres
+#      POSTGRES_HOST_AUTH_METHOD: trust  # permitir todas las conexiones
+#    networks:
+#      - POCOLYMPLICA-DEV
+#networks:
+#  POCOLYMPLICA-DEV:
